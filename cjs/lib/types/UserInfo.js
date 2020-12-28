@@ -90,7 +90,7 @@ UserInfo.fromParams = (params = {}, context) => {
     language: params.language
   }
   if (data.defaultPayCurrency) {
-    data.defaultPayCurrency = QIWI.getCurrencyByCode(data.defaultPayCurrency)
+    data.defaultPayCurrency = QIWI().getCurrencyByCode(data.defaultPayCurrency)
   }
   return new UserInfo(data, context)
 }

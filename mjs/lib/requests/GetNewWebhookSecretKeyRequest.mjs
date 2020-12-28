@@ -1,5 +1,5 @@
 import { WebhookNotFoundError, UnknownError } from '../errors/index.mjs'
-import { EventType, PaymentType } from '../constants/index.mjs'
+import { EventType } from '../constants/index.mjs'
 
 export default class GetNewWebhookSecretKeyRequest {
   static method = 'POST'

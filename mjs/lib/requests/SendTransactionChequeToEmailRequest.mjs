@@ -1,5 +1,5 @@
 import { TransactionNotFoundError, UnknownError } from '../errors/index.mjs'
-import { EventType, PaymentType, TransactionChequeMimeType } from '../constants/index.mjs'
+import { EventType, PaymentType } from '../constants/index.mjs'
 
 export default class SendTransactionChequeToEmailRequest {
   static method = 'POST'

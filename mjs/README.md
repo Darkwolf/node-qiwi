@@ -4,6 +4,8 @@
 `npm i --save @darkwolf/qiwi.mjs`
 #### CommonJS (Node.js v10.x LTS or higher)
 `npm i --save @darkwolf/qiwi.cjs`
+#### Lazy Loading CommonJS (Node.js v10.x LTS or higher)
+`npm i --save @darkwolf/qiwi.lazy.cjs`
 ## Using
 ```javascript
 // ECMAScript
@@ -11,6 +13,8 @@ import QIWI from '@darkwolf/qiwi.mjs'
 
 // CommonJS
 const QIWI = require('@darkwolf/qiwi.cjs')
+// Lazy Loading CommonJS
+const QIWI = require('@darkwolf/qiwi.lazy.cjs')
 
 const qiwi = new QIWI(token, {
   phoneNumber // Some requests require a wallet phone number

@@ -25,7 +25,7 @@ export default class WalletRestriction {
   }
 
   get isOutgoingPayments() {
-    return this.type === WalletOperationType.OUTGOING_PAYMENTS
+    return this.type === WalletRestrictionType.OUTGOING_PAYMENTS
   }
 
   setContext(context = {}) {

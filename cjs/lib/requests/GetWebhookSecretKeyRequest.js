@@ -1,5 +1,5 @@
 const { WebhookNotFoundError, UnknownError } = require('../errors')
-const { EventType, PaymentType } = require('../constants')
+const { EventType } = require('../constants')
 
 class GetWebhookSecretKeyRequest {
   constructor(parameters = {}, context) {

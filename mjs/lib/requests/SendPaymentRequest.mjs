@@ -181,10 +181,11 @@ export default class SendPaymentRequest {
           }
           this.context.qiwi.emit(EventType.ERROR, error)
           if (!this.context.qiwi.settings.ignoreErrors) throw error
+        } else {
+          response.setResult(PaymentRequest.fromParams(response.result, this.context))
+          this.context.qiwi.emit(EventType.RESPONSE, response)
+          return response.result
         }
-        response.setResult(PaymentRequest.fromParams(response.result, this.context))
-        this.context.qiwi.emit(EventType.RESPONSE, response)
-        return response.result
       } else {
         const error = new UnknownError(response.message).setResponse(response)
         this.context.qiwi.emit(EventType.ERROR, error)

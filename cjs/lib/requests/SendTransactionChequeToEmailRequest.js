@@ -1,5 +1,5 @@
 const { TransactionNotFoundError, UnknownError } = require('../errors')
-const { EventType, PaymentType, TransactionChequeMimeType } = require('../constants')
+const { EventType, PaymentType } = require('../constants')
 
 class SendTransactionChequeToEmailRequest {
   constructor(parameters = {}, context) {
